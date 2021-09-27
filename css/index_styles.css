@@ -30,8 +30,8 @@ header{
     padding: 10px;
 }
 
-.titulo-header{
-    text-align: center;
+.logo-header img{
+    width: 170px;
 }
 
 .opciones-header{
@@ -88,6 +88,7 @@ nav a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px;
 }
 
 .descripcion-inicio h2{
@@ -98,18 +99,74 @@ nav a:hover{
     font-size: 18px;
 }
 
-.descripcion-inicio h1{
-    font-size: 32px;
-}
-
 main{
     grid-area: main;
     background-color: #efebe0;
 }
 
+.titulo-main{
+    text-align: center;
+    margin: 20px;
+    font-size: 28px;
+}
+
+.contenedor-detalles{
+    display: grid;
+    width: 80%;
+    margin: 20px auto;
+    grid-template-areas:
+        "descripcion-flores"
+        "foto-flores"
+        "descripcion-macetas"
+        "foto-macetas";
+}
+
+.descripcion-flores{
+    grid-area: descripcion-flores;
+}
+
+.foto-flores{
+    grid-area: foto-flores;
+}
+
+.descripcion-macetas{
+    grid-area: descripcion-flores;
+}
+
+.foto-macetas{
+    grid-area: foto-macetas;
+}
+
+.contenedor-detalles .descripcion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 30px;
+}
+
+.descripcion h3{
+    font-size: 18px;
+}
+
+.descripcion p{
+    font-size: 14px;
+}
+
+.contenedor-detalles img{
+    width: 100%;
+    height: 100%;
+}
+
 footer{
     grid-area: footer;
     background-color: #000000;
+}
+.creador p{
+    text-align: center;
+    color: white;
+    font-size: 16px;
 }
 
 .img-inicio img{
@@ -143,5 +200,13 @@ footer{
     .img-inicio img{
         width: 100%;
         height: 100%;
+    }
+
+    .contenedor-detalles{
+        width: 60%;
+        border: 5px dotted black;
+        grid-template-areas:
+        "descripcion-flores foto-flores"
+        "foto-macetas   descripcion-macetas ";
     }
 }
