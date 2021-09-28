@@ -98,7 +98,7 @@ main{
 }
 
 .contenedor-contacto{
-    width: 60%;
+    width: 80%;
     text-align: center;
     background-color: #ffffff;
     padding: 20px;
@@ -165,5 +165,9 @@ footer{
 
     nav .nav-item{
         padding: 10px 20px;
+    }
+
+    .contenedor-contacto{
+        width: 50%;
     }
 }

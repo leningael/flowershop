@@ -109,7 +109,7 @@ footer{
 
 .productos{
     text-align: center;
-    width: 70%;
+    width: 80%;
     margin: 10px auto;
 }
 
@@ -120,7 +120,7 @@ footer{
 
 .contenedor-flores{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 25px;
 }
 
@@ -151,5 +151,11 @@ footer{
 
     nav .nav-item{
         padding: 10px 20px;
+    }
+
+    .contenedor-flores{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
     }
 }
