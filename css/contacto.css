@@ -5,7 +5,24 @@
     font-family: sans-serif;
 }
 
+html, body{
+    height: 100%;
+    background-color: #efebe0;
+}
+
+.contenedor-principal{
+    display: grid;
+    grid-template-rows: max-content max-content auto max-content;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+    min-height: 100%;
+}
+
 header{
+    grid-area: header;
     background-color: #000000;
     color: #ffffff;
     display: flex;
@@ -65,6 +82,7 @@ header{
 }
 
 nav{
+    grid-area: nav;
     background-color: #6b705c;
 }
 
@@ -72,7 +90,64 @@ nav .nav-item:hover{
     background-color: #403d39;
 }
 
-@media (min-width: 600px){
+main{
+    grid-area: main;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor-contacto{
+    width: 60%;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 2px solid #403d39;
+    gap: 20px;
+}
+
+.contenedor-contacto input, textarea{
+    width: 100%;
+    display: block;
+    margin: 15px auto;
+    padding: 5px;
+}
+
+.contenedor-contacto input[type=text], input[type=tel], textarea{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #000000;
+}
+
+.contenedor-contacto textarea{
+    height: 200px;
+    resize: vertical;
+}
+
+.contenedor-contacto input[type=submit]{
+    background-color: #403d39;
+    width: 40%;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+footer{
+    grid-area: footer;
+    background-color: #000000;
+}
+
+.creador p{
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+}
+
+@media (min-width: 800px){
     header{
         flex-direction: row;
     }

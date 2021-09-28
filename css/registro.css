@@ -94,14 +94,13 @@ main{
     grid-area: main;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .formularios{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    margin: 0 auto;
 }
 
 .contenedor-registro, .contenedor-ingresar{
@@ -146,9 +145,10 @@ footer{
     text-align: center;
     color: white;
     font-size: 16px;
+    padding: 10px;
 }
 
-@media (min-width: 600px){
+@media (min-width: 800px){
     header{
         flex-direction: row;
     }
