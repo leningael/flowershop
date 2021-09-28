@@ -5,7 +5,24 @@
     font-family: sans-serif;
 }
 
+html, body{
+    height: 100%;
+    background-color: #efebe0;
+}
+
+.contenedor-principal{
+    display: grid;
+    grid-template-rows: max-content max-content auto max-content;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+    min-height: 100%;
+}
+
 header{
+    grid-area: header;
     background-color: #000000;
     color: #ffffff;
     display: flex;
@@ -65,11 +82,70 @@ header{
 }
 
 nav{
+    grid-area: nav;
     background-color: #6b705c;
 }
 
 nav .nav-item:hover{
     background-color: #403d39;
+}
+
+main{
+    grid-area: main;
+    display: flex;
+    align-items: center;
+}
+
+.formularios{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.contenedor-registro, .contenedor-ingresar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 2px solid #403d39;
+    gap: 20px;
+}
+
+.formularios input{
+    width: 100%;
+    display: block;
+    margin: 15px auto;
+    padding: 5px;
+}
+
+.formularios input[type=text], input[type=email], input[type=password], input[type=date]{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #000000;
+}
+
+.formularios input[type=submit]{
+    background-color: #403d39;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+footer{
+    grid-area: footer;
+    background-color: #000000;
+}
+
+.creador p{
+    text-align: center;
+    color: white;
+    font-size: 16px;
 }
 
 @media (min-width: 600px){
@@ -90,5 +166,9 @@ nav .nav-item:hover{
 
     nav .nav-item{
         padding: 10px 20px;
+    }
+
+    .formularios{
+        flex-direction: row;
     }
 }

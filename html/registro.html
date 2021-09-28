@@ -6,28 +6,60 @@
     <link rel="stylesheet" href="../css/registro.css">
 </head>
 <body>
-    <header>
-        <div class="logo-header">
-            <img src="../resources/icons/logo.png">
-        </div>
-        <div class="opciones-header">
+    <div class="contenedor-principal">
+        <header>
+            <div class="logo-header">
+                <img src="../resources/icons/logo.png">
+            </div>
+            <div class="opciones-header">
+                <ul class="nav-list">
+                    <li><a href="registro.html" class="nav-item"><img src="../resources/icons/user.svg">Reg&iacute;strate</a></li>
+                    <li><a href="#" class="nav-item"><img src="../resources/icons/heart.svg">Lista de deseados</a></li>
+                    <li><a href="#" class="nav-item"><img src="../resources/icons/shopping-cart.svg" sizes="16px">Carrito</a></li>
+                    <li><input type="search" placeholder="Buscar"></li>
+                </ul>
+            </div>
+        </header>
+        <nav>
             <ul class="nav-list">
-                <li><a href="registro.html" class="nav-item"><img src="../resources/icons/user.svg">Reg&iacute;strate</a></li>
-                <li><a href="#" class="nav-item"><img src="../resources/icons/heart.svg">Lista de deseados</a></li>
-                <li><a href="#" class="nav-item"><img src="../resources/icons/shopping-cart.svg" sizes="16px">Carrito</a></li>
-                <li><input type="search" placeholder="Buscar"></li>
+                <li><a href="../index.html" class="nav-item">Inicio</a></li>
+                <li><a href="catalogo.html" class="nav-item">Cat&aacute;logo</a></li>
+                <li><a href="personal.html" class="nav-item">Personal</a></li>
+                <li><a href="comentarios.html" class="nav-item">Comentarios</a></li>
+                <li><a href="#" class="nav-item">Ofertas</a></li>
+                <li><a href="#" class="nav-item">Personalizar</a></li>
             </ul>
-        </div>
-    </header>
-    <nav>
-        <ul class="nav-list">
-            <li><a href="../index.html" class="nav-item">Inicio</a></li>
-            <li><a href="catalogo.html" class="nav-item">Cat&aacute;logo</a></li>
-            <li><a href="personal.html" class="nav-item">Personal</a></li>
-            <li><a href="comentarios.html" class="nav-item">Comentarios</a></li>
-            <li><a href="#" class="nav-item">Ofertas</a></li>
-            <li><a href="#" class="nav-item">Personalizar</a></li>
-        </ul>
-    </nav>
+        </nav>
+        <main>
+            <div class="formularios">
+                <div class="contenedor-registro">
+                    <h3>Registrate:</h3>
+                    <form>
+                        <input type="text" placeholder="Nombre" autofocus>
+                        <input type="text" placeholder="Apellido">
+                        <input type="text" placeholder="Nombre de usuario" required>
+                        <input type="email" placeholder="Correo electrónico" required>
+                        <input type="password" placeholder="Ingrese su contraseña" required>
+                        <input type="password" placeholder="Repita su contraseña" required>
+                        <input type="date" placeholder="Fecha de nacimiento">
+                        <input type="submit" value="Registrarse">
+                    </form>
+                </div>
+                <div class="contenedor-ingresar">
+                    <h3>Inicia Sesi&oacute;n:</h3>
+                    <form>
+                        <input type="text" placeholder="Nombre de usuario" required>
+                        <input type="password" placeholder="Ingrese su contraseña" required>
+                        <input type="submit" value="Ingresar">
+                    </form>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="creador">
+                <p>Diseñado por Lenin Rosas</p>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
