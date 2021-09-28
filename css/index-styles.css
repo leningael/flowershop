@@ -13,7 +13,7 @@ html, body{
 .contenedor-principal{
     display: grid;
     min-height: 100%;
-    grid-template-rows: max-content max-content auto max-content;
+    grid-template-rows: max-content max-content max-content auto max-content;
     grid-template-areas:
         "header"
         "nav"
@@ -194,6 +194,7 @@ footer{
 @media (min-width: 800px){
     .contenedor-principal{
         grid-template-columns: 200px auto;
+        grid-template-rows: max-content max-content auto max-content;
         grid-template-areas:
         "header header"
         "nav inicial"

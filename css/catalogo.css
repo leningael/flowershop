@@ -5,7 +5,26 @@
     font-family: sans-serif;
 }
 
+html, body{
+    height: 100%;
+    background-color: #efebe0;
+    /*background-image: url("../resources/img/rose.svg");
+    background-repeat: no-repeat;*/
+}
+
+.contenedor-principal{
+    display: grid;
+    min-height: 100%;
+    grid-template-rows: max-content max-content auto max-content;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+}
+
 header{
+    grid-area: header;
     background-color: #000000;
     color: #ffffff;
     display: flex;
@@ -65,11 +84,53 @@ header{
 }
 
 nav{
+    grid-area: nav;
     background-color: #6b705c;
 }
 
 nav .nav-item:hover{
     background-color: #403d39;
+}
+
+main{
+    grid-area: main;
+}
+
+footer{
+    grid-area: footer;
+    background-color: #000000;
+}
+.creador p{
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.productos{
+    text-align: center;
+    width: 70%;
+    margin: 10px auto;
+}
+
+.productos h3{
+    font-size: 22px;
+    margin: 10px;
+}
+
+.contenedor-flores{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.flor-producto{
+    cursor: pointer;
+}
+
+.contenedor-flores img{
+    width: 100%;
+    height: 100%;
 }
 
 @media (min-width: 600px){
