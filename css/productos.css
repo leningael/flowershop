@@ -178,6 +178,16 @@ footer{
     margin: 10px 0;
 }
 
+.url-sitio{
+    display: none;
+}
+
+@media print {
+    .url-sitio{
+        display: block;
+    }
+}
+
 @media (min-width: 600px){
     header{
         flex-direction: row;

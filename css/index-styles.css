@@ -191,6 +191,16 @@ footer{
     padding: 10px;
 }
 
+.url-sitio{
+    display: none;
+}
+
+@media print {
+    .url-sitio{
+        display: block;
+    }
+}
+
 @media (min-width: 800px){
     .contenedor-principal{
         grid-template-columns: 200px auto;
