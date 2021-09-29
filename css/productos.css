@@ -90,38 +90,6 @@ nav .nav-item:hover{
     background-color: #403d39;
 }
 
-main{
-    grid-area: main;
-}
-
-.productos{
-    text-align: center;
-    width: 80%;
-    margin: 20px auto;
-}
-
-.productos h3{
-    font-size: 22px;
-    margin: 10px;
-}
-
-.contenedor-productos{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-}
-
-.producto{
-    cursor: pointer;
-}
-
-
-.contenedor-productos img{
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-}
-
 footer{
     grid-area: footer;
     background-color: #000000;
@@ -131,6 +99,83 @@ footer{
     color: white;
     font-size: 16px;
     padding: 10px;
+}
+
+.ficha-flor{
+    width: 80%;
+    margin: 20px auto;
+}
+
+.detalles{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border: 2px dotted #000000;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.compra-flor{
+    order: 1;
+    flex: 1;
+}
+
+.foto-flor{
+    order: 2;
+}
+
+.foto-flor img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.compra-flor > *{
+    margin: 20px;
+}
+
+.compra-flor select, button{
+    padding: 5px;
+}
+
+.compra-flor input[type=number]{
+    width: 60px;
+}
+
+.botones button{
+    background-color: #403d39;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.botones{
+    display: flex;
+    gap: 20px;
+}
+
+.wishlist{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    width: 140px;
+    background-color: #403d39;
+    color: white;
+    cursor: pointer;
+}
+
+.descripcion{
+    background-color: #403d39;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
 }
 
 @media (min-width: 600px){
@@ -153,7 +198,15 @@ footer{
         padding: 10px 20px;
     }
 
-    .contenedor-productos{
-        grid-template-columns: repeat(4, 1fr);
+    .detalles{
+        flex-direction: row;
+    }
+
+    .compra-flor{
+        order: 2;
+    }
+
+    .foto-flor{
+        order: 1;
     }
 }
